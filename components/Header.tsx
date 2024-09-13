@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 
+// components
+import Nav from "./Nav";
+
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12 text-white bg-pink-50/20">
+    <header className="py-8 xl:py-12 text-white">
       <div className="container mxauto">
         {/* logo */}
         <Link href="/">
@@ -11,6 +14,13 @@ const Header = () => {
             Besu <span className="text-accent">.</span>
           </h1>
         </Link>
+        {/* desktop nav & hire me button */}
+        <div className="hidden xl:flex">
+          <Nav />
+          <Link href="/contact">
+            <Button>Hire me.</Button>
+          </Link>
+        </div>
       </div>
     </header>
   );
