@@ -20,16 +20,24 @@ const socials = [
   },
 ];
 
-const Social = ({ containerStyles, iconStyles }) => {
+interface SocialProps {
+  containerStyles: string;
+  iconStyles: string;
+}
+
+const Social: React.FC<SocialProps> = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
-      {socials.map((item, index) => {
-        return (
-          <Link key={index} href={item.path} className={iconStyles}>
-            {item.icon}
-          </Link>
-        );
-      })}
+      {socials.map((item, index) => (
+        <Link
+          key={index}
+          href={item.path}
+          className={iconStyles}
+          target="_blank"
+        >
+          {item.icon}
+        </Link>
+      ))}
     </div>
   );
 };
