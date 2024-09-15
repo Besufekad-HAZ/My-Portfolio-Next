@@ -23,7 +23,11 @@ const Home = () => {
             </p>
             {/* button and socials */}
             <div>
-              <Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="uppercase flex items-center gap-2"
+              >
                 <span>Download CV</span>
                 <FiDownload />
               </Button>
