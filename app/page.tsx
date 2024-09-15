@@ -11,7 +11,7 @@ const Home = () => {
         >
           {/* text  */}
           <div className="text-center xl:text-left">
-            <span className="text-xl">Fullstack Developer</span>
+            <span className="text-xl">Full-stack Developer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />
               <span className="text-accent">Besufekad Alemu</span>
@@ -21,6 +21,13 @@ const Home = () => {
               expertise in a wide range of programming languages and
               technologies.
             </p>
+            {/* button and socials */}
+            <div>
+              <Button>
+                <span>Download CV</span>
+                <FiDownload />
+              </Button>
+            </div>
           </div>
           {/* photo */}
           <div>Photo</div>
