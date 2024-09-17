@@ -13,6 +13,7 @@ const Photo = () => {
           transition: { delay: 2, duration: 0.4, ease: "easeIn" },
         }}
       >
+        {/* image */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
@@ -30,6 +31,18 @@ const Photo = () => {
             className="object-contain"
           />
         </motion.div>
+
+        {/* circle */}
+       <motion.svg>
+        <motion.circle
+          cx="149"
+          cy="149"
+          r="149"
+          fill="none"
+          strokeWidth="1"
+          stroke="white"
+        />
+       </motion.svg>
       </motion.div>
     </div>
   );
