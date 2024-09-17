@@ -20,7 +20,8 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[296px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten"
+          className="w-[296px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten
+          relative"
         >
           <Image
             src="/assets/photo.png"
@@ -47,10 +48,15 @@ const Photo = () => {
             stroke="#00ff99"
             strokeLinecap="round"
             strokeLinejoin="round"
-            initial={{strokeDasharray: "24 10 0 0"}}
+            initial={{ strokeDasharray: "24 10 0 0" }}
             animate={{
-                strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
-                rotate: [120, 360]
+              strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
+              rotate: [120, 360],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              repeatType: "reverse",
             }}
           />
         </motion.svg>
