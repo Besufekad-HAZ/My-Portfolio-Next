@@ -41,7 +41,13 @@ const Stats = () => {
                   delay={2}
                   className="text-4xl xl:text-6xl font-extrabold"
                 />
-                <p>{item.text}</p>
+                <p
+                  className={`${
+                    item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
+                  }`}
+                >
+                  {item.text}
+                </p>
               </div>
             );
           })}
