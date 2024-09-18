@@ -78,7 +78,7 @@ const Services = () => {
                   {service.title}
                 </h2>
                 {/* description */}
-                <p>{service.text}</p>
+                <p className="text-white/60">{service.text}</p>
                 {/* border  */}
                 <div className="border-b border-white/20 w-full"></div>
               </div>
