@@ -71,7 +71,12 @@ const Services = () => {
                   </Link>
                 </div>
                 {/* title */}
-                <h2>{service.title}</h2>
+                <h2
+                  className="text-[40px] font-bold leading-none text-white
+                 group-hover:text-accent transition-all duration-500"
+                >
+                  {service.title}
+                </h2>
                 {/* description */}
                 <p>{service.text}</p>
                 {/* border  */}
