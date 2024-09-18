@@ -1,5 +1,6 @@
 "use client";
 
+import { time } from "console";
 import {
   FaHtml5,
   FaCss3,
@@ -16,6 +17,7 @@ import {
   SiRubyonrails,
 } from "react-icons/si";
 
+// about me data
 const about = {
   title: "About me",
   Description:
@@ -51,6 +53,33 @@ const about = {
     },
   ],
 };
+
+// experience data
+const experience = {
+  icon: "/assets/resume/badge.svg",
+  title: "My Experience",
+  description:
+    "I have a diverse background in full-stack development and graphic design, \
+    with experience in various industries and a strong focus on creating efficient and scalable web applications.",
+  items: [
+    {
+      company: "Amen Devs",
+      position: "Full Stack Developer",
+      duration: "SEPTEMBER 2023 — PRESENT",
+    },
+    {
+      company: "Ezra Seminary",
+      position: "Full Stack Developer",
+      duration: "OCTOBER 2023 — SEPTEMBER 2024",
+    },
+    {
+      company: "Ethiopia Adventist Press",
+      position: "Graphics Designer and IT support",
+      duration: "JANUARY 2018 — OCTOBER 2022",
+    },
+  ],
+};
+
 const Resume = () => {
   return <div>Resume Page</div>;
 };
