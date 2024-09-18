@@ -45,12 +45,18 @@ const Services = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
           }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
         >
           {services.map((service, index) => {
             return (
-              <div key={index}>
-                <div>
-                  <div>{service.num}</div>
+              <div
+                key={index}
+                className="flex-1 flex flex-col justify-center
+              gap-6 group"
+              >
+                {/* top section  */}
+                <div className="w-full flex justify-between items-center">
+                  <div className="text-5xl font-extrabold">{service.num}</div>
                   <Link href={service.href}>
                     <BsArrowDownRight />
                   </Link>
