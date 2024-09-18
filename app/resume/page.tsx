@@ -11,9 +11,15 @@ import {
 
 import {
   SiTailwindcss,
-  SiNextdotjs
+  SiNextdotjs,
+  SiRuby,
+  SiRubyonrails,
 } from "react-icons/si";
 
+const about = {
+  title: "About me",
+  Description: " I'm a Fullstack developer ",
+};
 const Resume = () => {
   return <div>Resume Page</div>;
 };
