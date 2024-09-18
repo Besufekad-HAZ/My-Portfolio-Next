@@ -197,16 +197,23 @@ const Resume = () => {
           className="flex flex-col xl:flex-row
         gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto
-          xl:mx-0 gap-6">
-            <TabsTrigger value={""}>Experience</TabsTrigger>
-            <TabsTrigger value={""}>Education</TabsTrigger>
-            <TabsTrigger value={""}>Skills</TabsTrigger>
-            <TabsTrigger value={""}>About me</TabsTrigger>
+          <TabsList
+            className="flex flex-col w-full max-w-[380px] mx-auto
+          xl:mx-0 gap-6"
+          >
+            <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
 
           {/* content  */}
-          <div>content</div>
+          <div>
+            {/* experience */}
+            <TabsContent value="experience" className="w-full ">
+              experience
+            </TabsContent>
+          </div>
         </Tabs>
       </div>
     </motion.div>
