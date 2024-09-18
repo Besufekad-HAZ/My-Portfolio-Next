@@ -56,7 +56,12 @@ const Services = () => {
               >
                 {/* top section  */}
                 <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold">{service.num}</div>
+                  <div
+                    className="text-5xl font-extrabold text-outline
+                  text-transparent group-hover:text-outline-hover"
+                  >
+                    {service.num}
+                  </div>
                   <Link href={service.href}>
                     <BsArrowDownRight />
                   </Link>
