@@ -1,6 +1,7 @@
 "use client";
 
 import { time } from "console";
+import { title } from "process";
 import {
   FaHtml5,
   FaCss3,
@@ -15,6 +16,9 @@ import {
   SiNextdotjs,
   SiRuby,
   SiRubyonrails,
+  SiTypescript,
+  SiMongodb,
+  SiPostgresql,
 } from "react-icons/si";
 
 // about me data
@@ -102,6 +106,66 @@ const education = {
       institution: "Ambo University",
       degree: "BSc. Computer Science",
       duration: "NOVEMBER 2013 — JULY 2017",
+    },
+  ],
+};
+
+// skills data
+const skills = {
+  title: "My skills",
+  description: "A comprehensive list of my technical skills.",
+  skillList: [
+    {
+      icon: <FaHtml5 />,
+      name: "HTML 5",
+    },
+    {
+      icon: <FaCss3 />,
+      name: "CSS 3",
+    },
+    {
+      icon: <FaJs />,
+      name: "JavaScript",
+    },
+    {
+      icon: <FaReact />,
+      name: "React",
+    },
+    {
+      icon: <SiNextdotjs />,
+      name: "Next.js",
+    },
+    {
+      icon: <FaNodeJs />,
+      name: "Node.js",
+    },
+    {
+      icon: <SiTailwindcss />,
+      name: "Tailwind CSS",
+    },
+    {
+      icon: <SiRuby />,
+      name: "Ruby",
+    },
+    {
+      icon: <SiRubyonrails />,
+      name: "Ruby on Rails",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "TypeScript",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "MongoDB",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "PostgreSQL",
+    },
+    {
+      icon: <FaFigma />,
+      name: "Figma",
     },
   ],
 };
