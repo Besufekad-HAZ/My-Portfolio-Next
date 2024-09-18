@@ -80,6 +80,32 @@ const experience = {
   ],
 };
 
+// education data
+const education = {
+  icon: "/assets/resume/badge.svg",
+  title: "My Education",
+  description:
+    "I have a diverse background in full-stack development and graphic design, \
+    with experience in various industries and a strong focus on creating efficient and scalable web applications.",
+  items: [
+    {
+      institution: "Microverse",
+      degree: "Full Stack Developer Certificate",
+      duration: "JANUARY 2023 — SEPTEMBER 2023",
+    },
+    {
+      institution: "Berhanena Selam Printing Enterprise",
+      degree: "Graphics and layout design with printing techonology",
+      duration: "JANUARY 2019 — MAY 2019",
+    },
+    {
+      institution: "Ambo University",
+      degree: "BSc. Computer Science",
+      duration: "NOVEMBER 2013 — JULY 2017",
+    },
+  ],
+};
+
 const Resume = () => {
   return <div>Resume Page</div>;
 };
