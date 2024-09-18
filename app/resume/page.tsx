@@ -170,6 +170,8 @@ const skills = {
   ],
 };
 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 const Resume = () => {
   return <div>Resume Page</div>;
 };
