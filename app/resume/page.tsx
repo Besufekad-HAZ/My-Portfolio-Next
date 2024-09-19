@@ -213,6 +213,10 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full ">
               experience
             </TabsContent>
+            {/* education */}
+            <TabsContent value="experience" className="w-full ">
+              education
+            </TabsContent>
           </div>
         </Tabs>
       </div>
