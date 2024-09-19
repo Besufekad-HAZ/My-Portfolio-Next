@@ -23,8 +23,15 @@ const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
 >(({ className, ...props }, ref) => (
-  <TabsPrimitive.Trigger ref={ref} className={cn(
-    "inline-flex items-center w-full bg-[#27272c] justify-center whitespace-nowrap text-white rounded-lg p-3 text-balance", className)} {...props} />
+  <TabsPrimitive.Trigger
+    ref={ref}
+    className={cn(
+      "inline-flex items-center w-full bg-[#27272c] justify-center whitespace-nowrap text-white rounded-lg p-3 text-balance \
+      font-medium ring-offset-white transition-all disabled:pointer-events-none disabled:opacity-50",
+      className
+    )}
+    {...props}
+  />
 ));
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName;
 
