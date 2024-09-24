@@ -318,7 +318,9 @@ const Resume = () => {
                               </div>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p className="text-slate-900 text-lg font-semibold">{skill.name}</p>
+                              <p className="text-slate-900 text-lg font-semibold">
+                                {skill.name}
+                              </p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
@@ -330,8 +332,32 @@ const Resume = () => {
             </TabsContent>
 
             {/* About me */}
-            <TabsContent value="about" className="w-full ">
-              about
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.Description} <br />
+                </p>
+                <ul
+                  className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px]
+                mx-auto xl:mx-0"
+                >
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
+                        <span>{item.fieldName}</span>
+                        <p className="text-accent">{item.fieldValue}</p>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
