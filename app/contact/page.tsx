@@ -33,6 +33,8 @@ const info = [
     content: "02 Kotebe, Addis Ababa Ethiopia",
   },
 ];
+
+import { motion } from "framer-motion";
 const Contact = () => {
   return <div>Contact Page</div>;
 };
