@@ -69,17 +69,17 @@ const experience = {
     {
       company: "Amen Devs",
       position: "Full Stack Developer",
-      duration: "SEPTEMBER 2023 — PRESENT",
+      duration: "2023 — PRESENT",
     },
     {
       company: "Ezra Seminary",
       position: "Full Stack Developer",
-      duration: "OCTOBER 2023 — SEPTEMBER 2024",
+      duration: "2023 — 2024",
     },
     {
       company: "Ethiopia Adventist Press",
       position: "Graphics Designer and IT support",
-      duration: "JANUARY 2018 — OCTOBER 2022",
+      duration: "2018 — 2022",
     },
   ],
 };
@@ -216,33 +216,26 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
-                <ScrollArea className="h-[400px] lg:h-[500px]">
-                  {" "}
-                  // Adjust height based on screen size
-                  <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    {" "}
-                    // Adjust grid layout based on screen size
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] py-4 px-6 sm:py-6 sm:px-8 lg:py-8 lg:px-10 rounded-xl
-                         flex flex-col justify-center items-center lg:items-start gap-2 sm:gap-3 lg:gap-4"
+                          className="bg-[#232329] py-4 px-10 rounded-xl flex flex-col
+                          justify-center items-center lg:items-start gap-1"
                         >
-                          <span className="text-sm sm:text-base lg:text-lg">
-                            {item.duration}
-                          </span>{" "}
-                          // Adjust text size based on screen size
-                          <h3 className="text-base sm:text-lg lg:text-xl">
+                          <span className="text-accent">{item.duration}</span>
+                          <h3
+                            className="text-xl max-w-[260px] min-h-[60px]
+                          text-center lg:text-left"
+                          >
                             {item.position}
-                          </h3>{" "}
-                          <div className="flex flex-col items-center lg:items-start">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>{" "}
-                            // Example dot, adjust as needed
-                            <p className="text-sm sm:text-base lg:text-lg">
-                              {item.company}
-                            </p>{" "}
-                            // Adjust text size based on screen size
+                          </h3>
+                          <div className="flex items-center gap-3 ">
+                            {/* dot */}
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <p className="text-white/60">{item.company}</p>
                           </div>
                         </li>
                       );
