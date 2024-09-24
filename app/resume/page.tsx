@@ -220,7 +220,7 @@ const Resume = () => {
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
-                        <li>
+                        <li key={index}>
                           <span>{item.duration}</span>
                           <h3>{item.position}</h3>
                           <div>
