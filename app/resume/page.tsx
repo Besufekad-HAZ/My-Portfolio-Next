@@ -95,17 +95,17 @@ const education = {
     {
       institution: "Microverse",
       degree: "Full Stack Developer Certificate",
-      duration: "JANUARY 2023 — SEPTEMBER 2023",
+      duration: "January 2023 — September 2023",
     },
     {
       institution: "Berhanena Selam Printing Enterprise",
-      degree: "Graphics and layout design with printing technology",
-      duration: "JANUARY 2019 — MAY 2019",
+      degree: "Graphics and Layout Design with Printing Technology",
+      duration: "January 2019 — May 2019",
     },
     {
       institution: "Ambo University",
       degree: "BSc. Computer Science",
-      duration: "NOVEMBER 2013 — JULY 2017",
+      duration: "November 2013 — July 2017",
     },
   ],
 };
@@ -246,7 +246,38 @@ const Resume = () => {
             </TabsContent>
             {/* education */}
             <TabsContent value="education" className="w-full ">
-              education
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{education.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {education.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {education.items.map((item, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="bg-[#232329] py-4 px-10 rounded-xl flex flex-col
+                          justify-center items-center lg:items-start gap-1"
+                        >
+                          <span className="text-accent">{item.degree}</span>
+                          <h3
+                            className="text-lg max-w-[260px] min-h-[60px]
+                          text-center lg:text-left" //also this text can be xl based on the screen size ❗❗❗
+                          >
+                            {item.duration}
+                          </h3>
+                          <div className="flex items-center gap-3 ">
+                            {/* dot */}
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <p className="text-white/60">{item.institution}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+              </div>
             </TabsContent>
             {/* Skills */}
             <TabsContent value="skills" className="w-full ">
