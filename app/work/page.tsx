@@ -134,7 +134,10 @@ const Work = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
@@ -217,13 +220,22 @@ const Work = () => {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index}>
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={800}
-                    height={600}
-                    className="rounded-xl"
-                  />
+                  <div
+                    className="h-[460px] relative group flex justify-center
+                  text-center bg-pink-50/20"
+                  >
+                    {/* overlay */}
+                    <div></div>
+                    {/* image */}
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
                 </SwiperSlide>
               ))}
             </Swiper>
