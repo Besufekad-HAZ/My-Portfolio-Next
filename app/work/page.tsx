@@ -42,7 +42,7 @@ const projects = [
       { name: "MongoDB" },
     ],
     image: "/assets/work/project1.png",
-    link: "https://mern-dashboard-client-37t0.onrender.com/dashboard",
+    link: "https://mern-dashboard-client-37t0.onrender.com",
     github: "https://github.com/Besufekad-HAZ/MERN-Admin-Dashboard",
   },
   {
