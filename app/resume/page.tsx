@@ -226,6 +226,7 @@ const Resume = () => {
                           <div>
                             {/* dot  */}
                             <span></span>
+                            <p>{item.company}</p>
                           </div>
                         </li>
                       );
