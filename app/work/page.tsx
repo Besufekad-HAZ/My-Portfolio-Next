@@ -241,6 +241,8 @@ const Work = () => {
                   </div>
                 </SwiperSlide>
               ))}
+              {/* slider buttons */}
+             <WorkSliderBtns />
             </Swiper>
           </div>
         </div>
