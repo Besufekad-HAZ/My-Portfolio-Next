@@ -304,7 +304,7 @@ const Resume = () => {
                   {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
-                        <TooltipProvider>
+                        <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger>
                               <div
