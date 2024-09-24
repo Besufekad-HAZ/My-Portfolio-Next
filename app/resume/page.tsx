@@ -218,7 +218,7 @@ const Resume = () => {
           </TabsList>
 
           {/* content  */}
-          <div>
+          <div className="w-full h-full">
             {/* experience */}
             <TabsContent value="experience" className="w-full ">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -300,13 +300,16 @@ const Resume = () => {
                     {skills.description}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
                   {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger>
+                            <TooltipTrigger
+                              className="w-full h-[150px] bg-[#232329] rounded-xl flex
+                            justify-center items-center group"
+                            >
                               <div
                                 className="text-5xl group-hover:text-accent transition-all
                               duration-300"
