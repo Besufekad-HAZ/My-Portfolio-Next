@@ -48,16 +48,33 @@ const Contact = () => {
       <div className="container mx-auto">
         <div>
           {/* form */}
-          <form
-            className="w-full flex flex-col gap-4
+          <div>
+            <form
+              className="w-full flex flex-col gap-4
           lg:flex-row"
-          >
-            <Input name="name" placeholder="Name" />
-            <Input name="email" type="email" placeholder="Email" />
-            <Input name="subject" placeholder="Subject" />
-            <Textarea name="message" placeholder="Message" />
-            <Button type="submit">Send</Button>
-          </form>
+            >
+              <Input name="name" placeholder="Name" />
+              <Input name="email" type="email" placeholder="Email" />
+              <Input name="subject" placeholder="Subject" />
+              <Textarea name="message" placeholder="Message" />
+              <Button type="submit">Send</Button>
+            </form>
+          </div>
+          {/* info */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+            {info.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-4 bg-white/5 p-4 rounded-lg"
+              >
+                {item.icon}
+                <div>
+                  <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                  <p className="text-white/60">{item.content}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </motion.section>
