@@ -23,6 +23,9 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
+// components
+import WorkSliderBtns from "@/components/WorkSliderBtns";
+
 const projects = [
   {
     num: "01",
@@ -242,7 +245,11 @@ const Work = () => {
                 </SwiperSlide>
               ))}
               {/* slider buttons */}
-             <WorkSliderBtns />
+              <WorkSliderBtns
+                containerStyles={""}
+                btnStyles={""}
+                iconsStyles={""}
+              />
             </Swiper>
           </div>
         </div>
