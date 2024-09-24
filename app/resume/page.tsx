@@ -19,6 +19,8 @@ import {
   SiTypescript,
   SiMongodb,
   SiPostgresql,
+  SiAdobephotoshop,
+  SiAdobeindesign,
 } from "react-icons/si";
 
 // about me data
@@ -167,6 +169,14 @@ const skills = {
       icon: <FaFigma />,
       name: "Figma",
     },
+    {
+      icon: <SiAdobephotoshop />,
+      name: "Photoshop",
+    },
+    {
+      icon: <SiAdobeindesign />,
+      name: "InDesign",
+    },
   ],
 };
 
@@ -244,6 +254,7 @@ const Resume = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
+
             {/* education */}
             <TabsContent value="education" className="w-full ">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -279,10 +290,22 @@ const Resume = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
+
             {/* Skills */}
-            <TabsContent value="skills" className="w-full ">
-              skills
+            <TabsContent value="skills" className="w-full h-full">
+              <div className="flex flex-col gap-[30px]">
+                <div>
+                  <h3>{skills.title}</h3>
+                  <p className="text-white/60">{skills.description}</p>
+                </div>
+                <ul>
+                  {skills.skillList.map((skill, index) => {
+                    return <li key={index}>{skill.name}</li>;
+                  })}
+                </ul>
+              </div>
             </TabsContent>
+
             {/* About me */}
             <TabsContent value="about" className="w-full ">
               about
