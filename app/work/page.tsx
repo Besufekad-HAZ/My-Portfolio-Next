@@ -49,8 +49,8 @@ const projects = [
     description:
       "Ezra Seminary is a MERN stack Learning Management System (LMS) app to study the Bible online, get daily devotions, and study the quarterly Sabbath school.",
     stack: [
-      { name: "HTML 5" },
-      { name: "CSS 3" },
+      { name: "HTML5" },
+      { name: "CSS3" },
       { name: "TypeScript" },
       { name: "React" },
       { name: "Node.js" },
@@ -70,8 +70,8 @@ const projects = [
     stack: [
       { name: "Ruby on Rails" },
       { name: "PostgreSQL" },
-      { name: "HTML 5" },
-      { name: "CSS 3" },
+      { name: "HTML5" },
+      { name: "CSS3" },
       { name: "JavaScript" },
       { name: "Heroku" },
       { name: "GitHub Actions" },
@@ -89,8 +89,8 @@ const projects = [
     stack: [
       { name: "Ruby on Rails" },
       { name: "PostgreSQL" },
-      { name: "HTML 5" },
-      { name: "CSS 3" },
+      { name: "HTML5" },
+      { name: "CSS3" },
       { name: "JavaScript" },
       { name: "React" },
       { name: "Redux" },
@@ -110,8 +110,8 @@ const projects = [
     stack: [
       { name: "Ruby on Rails" },
       { name: "PostgreSQL" },
-      { name: "HTML 5" },
-      { name: "CSS 3" },
+      { name: "HTML5" },
+      { name: "CSS3" },
       { name: "JavaScript" },
       { name: "Devise" },
     ],
