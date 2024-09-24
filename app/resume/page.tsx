@@ -99,7 +99,7 @@ const education = {
     },
     {
       institution: "Berhanena Selam Printing Enterprise",
-      degree: "Graphics and layout design with printing techonology",
+      degree: "Graphics and layout design with printing technology",
       duration: "JANUARY 2019 — MAY 2019",
     },
     {
@@ -216,17 +216,33 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <ScrollArea className="h-[400px] lg:h-[500px]">
+                  {" "}
+                  // Adjust height based on screen size
+                  <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    {" "}
+                    // Adjust grid layout based on screen size
                     {experience.items.map((item, index) => {
                       return (
-                        <li key={index}>
-                          <span>{item.duration}</span>
-                          <h3>{item.position}</h3>
-                          <div>
-                            {/* dot  */}
-                            <span></span>
-                            <p>{item.company}</p>
+                        <li
+                          key={index}
+                          className="bg-[#232329] py-4 px-6 sm:py-6 sm:px-8 lg:py-8 lg:px-10 rounded-xl
+                         flex flex-col justify-center items-center lg:items-start gap-2 sm:gap-3 lg:gap-4"
+                        >
+                          <span className="text-sm sm:text-base lg:text-lg">
+                            {item.duration}
+                          </span>{" "}
+                          // Adjust text size based on screen size
+                          <h3 className="text-base sm:text-lg lg:text-xl">
+                            {item.position}
+                          </h3>{" "}
+                          <div className="flex flex-col items-center lg:items-start">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>{" "}
+                            // Example dot, adjust as needed
+                            <p className="text-sm sm:text-base lg:text-lg">
+                              {item.company}
+                            </p>{" "}
+                            // Adjust text size based on screen size
                           </div>
                         </li>
                       );
