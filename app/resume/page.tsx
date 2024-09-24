@@ -89,8 +89,8 @@ const education = {
   icon: "/assets/resume/badge.svg",
   title: "My Education",
   description:
-    "I have a diverse background in full-stack development and graphic design, \
-    with experience in various industries and a strong focus on creating efficient and scalable web applications.",
+    "I have a solid educational foundation in computer science and graphic design, \
+    having completed various programs that equipped me with the skills needed for full-stack development and design.",
   items: [
     {
       institution: "Microverse",
@@ -260,12 +260,12 @@ const Resume = () => {
                           className="bg-[#232329] py-4 px-10 rounded-xl flex flex-col
                           justify-center items-center lg:items-start gap-1"
                         >
-                          <span className="text-accent">{item.degree}</span>
+                          <span className="text-accent">{item.duration}</span>
                           <h3
                             className="text-lg max-w-[260px] min-h-[60px]
                           text-center lg:text-left" //also this text can be xl based on the screen size ❗❗❗
                           >
-                            {item.duration}
+                            {item.degree}
                           </h3>
                           <div className="flex items-center gap-3 ">
                             {/* dot */}
