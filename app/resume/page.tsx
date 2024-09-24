@@ -1,7 +1,6 @@
 "use client";
 
-import { time } from "console";
-import { title } from "process";
+// icons
 import {
   FaHtml5,
   FaCss3,
