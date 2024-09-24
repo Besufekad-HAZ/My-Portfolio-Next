@@ -43,9 +43,23 @@ const Contact = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="py-6"
     >
-      Contact page
+      <div className="container mx-auto">
+        <div>
+          {/* form */}
+          <form
+            className="w-full flex flex-col gap-4
+          lg:flex-row"
+          >
+            <Input name="name" placeholder="Name" />
+            <Input name="email" type="email" placeholder="Email" />
+            <Input name="subject" placeholder="Subject" />
+            <Textarea name="message" placeholder="Message" />
+            <Button type="submit">Send</Button>
+          </form>
+        </div>
+      </div>
     </motion.section>
   );
 };
