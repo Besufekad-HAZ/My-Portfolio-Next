@@ -227,8 +227,8 @@ const Resume = () => {
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3
-                            className="text-xl max-w-[260px] min-h-[60px]
-                          text-center lg:text-left"
+                            className="text-lg max-w-[260px] min-h-[60px]
+                          text-center lg:text-left" //the text can be xl based on the screen size ❗❗❗
                           >
                             {item.position}
                           </h3>
