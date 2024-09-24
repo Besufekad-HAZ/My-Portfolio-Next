@@ -10,6 +10,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import swiper styles
 import "swiper/css";
 
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+
+// import Tooltips
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+import Link from "next/link";
+import Image from "next/image";
+
 const Work = () => {
   return <div>Work Page</div>;
 };
