@@ -18,18 +18,25 @@ const services = [
   },
   {
     num: "03",
-    title: "Game Development",
-    text: "I develop and design games with a focus on performance and user experience. I am well versed in HTML, CSS, and JavaScript. I also have experience with React and Next.js.",
-    href: "/game-development",
+    title: "System Administration",
+    text: "I provide system administration and IT support, ensuring smooth operation and security of IT systems.",
+    href: "/system-administration",
   },
   {
     num: "04",
-    title: "AI Development",
-    text: "I develop and design AI with a focus on performance and user experience. I am well versed in HTML, CSS, and JavaScript. I also have experience with React and Next.js.",
-    href: "/ai-development",
+    title: "Graphic Design",
+    text: "I design various web and print graphics, focusing on aesthetics and effective communication.",
+    href: "/graphic-design",
+  },
+  {
+    num: "05",
+    title: "IT Support",
+    text: "I offer IT support services to improve network efficiency and maintain IT infrastructure.",
+    href: "/it-support",
   },
 ];
 
+// import framer motion
 import { motion } from "framer-motion";
 
 const Services = () => {
