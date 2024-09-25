@@ -93,11 +93,10 @@ const Contact = () => {
                 className="h-[200px]"
                 placeholder="Type your message here."
               />
+              <Button size="md" className="max-w-40">
+                Send Message
+              </Button>
             </form>
-
-            <Button size="md" className="max-w-40">
-              Send Message
-            </Button>
           </div>
           {/* info */}
           <div
