@@ -94,6 +94,10 @@ const Contact = () => {
                 placeholder="Type your message here."
               />
             </form>
+
+            <Button size="md" className="max-w-40">
+              Send Message
+            </Button>
           </div>
           {/* info */}
           <div
