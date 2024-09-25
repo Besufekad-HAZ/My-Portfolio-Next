@@ -9,19 +9,19 @@ const services = [
     num: "01",
     title: "Web Development",
     text: "I develop and design websites with a focus on performance and user experience. I am well versed in HTML, CSS, and JavaScript. I also have experience with React and Next.js.",
-    href: "/web-development",
+    href: "/contact",
   },
   {
     num: "02",
     title: "Mobile App Development",
     text: "I develop and design mobile apps with a focus on performance and user experience. I am well versed in HTML, CSS, and JavaScript. I also have experience with React and Next.js.",
-    href: "/mobile-development",
+    href: "/contact",
   },
   {
     num: "03",
     title: "System Administration",
     text: "I provide system administration and IT support, ensuring smooth operation and security of IT systems.",
-    href: "/system-administration",
+    href: "/conact",
   },
   {
     num: "04",
@@ -33,7 +33,7 @@ const services = [
     num: "05",
     title: "IT Support",
     text: "I offer IT support services to improve network efficiency and maintain IT infrastructure.",
-    href: "/it-support",
+    href: "/contact",
   },
 ];
 
