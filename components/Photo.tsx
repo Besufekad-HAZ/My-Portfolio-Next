@@ -20,14 +20,14 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[450px] xl:h-[450px] mix-blend-lighten
-          absolute"
+          className="w-[298px] h-[298px] xl:w-[450px] xl:h-[450px] mix-blend-lighten absolute"
         >
           <Image
             src="/assets/profile.png"
             priority
             quality={100}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             alt="My Image"
             className="object-contain"
           />
