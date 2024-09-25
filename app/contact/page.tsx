@@ -58,8 +58,13 @@ const Contact = () => {
                 something amazing together!
               </p>
               {/* input  */}
-              <div>
-                <Input />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Input type="firstName" placeholder="First Name" />
+                <Input type="lastName" placeholder="Last Name" />
+                <Input type="email" placeholder="Email Address" />
+                <Input type="phone" placeholder="Phone number" />
+                <Textarea placeholder="Message" />
+                <Button type="submit">Submit</Button>
               </div>
             </form>
           </div>
