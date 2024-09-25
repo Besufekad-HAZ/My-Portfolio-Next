@@ -1,9 +1,10 @@
 "use client";
 
+import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input"; // Importing from the UI component
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 import {
   Select,
   SelectContent,
@@ -13,8 +14,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const info = [
   {
@@ -34,7 +35,6 @@ const info = [
   },
 ];
 
-// Define the services array
 const services = [
   {
     num: "01",
@@ -63,8 +63,14 @@ const services = [
   },
 ];
 
-import { motion } from "framer-motion";
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xqazvrzy");
+  const [selectedService, setSelectedService] = useState("");
+
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -78,7 +84,11 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[60%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form
+              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+              onSubmit={handleSubmit}
+              method="POST"
+            >
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">
                 I'm excited to collaborate on your next project. Whether you
@@ -88,41 +98,54 @@ const Contact = () => {
               </p>
               {/* input  */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstName" placeholder="First Name" />
-                <Input type="lastName" placeholder="Last Name" />
-                <Input type="email" placeholder="Email Address" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input type="text" name="firstName" placeholder="First Name" />
+                <Input type="text" name="lastName" placeholder="Last Name" />
+                <Input type="email" name="email" placeholder="Email Address" />
+                <Input type="text" name="phone" placeholder="Phone number" />
               </div>
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
               {/* select */}
-              <Select>
+              <Select
+                onValueChange={(value) => setSelectedService(value)}
+                name="service"
+              >
                 <SelectTrigger className="w-full animate-blink-border">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="web-development">
-                      Web Development
-                    </SelectItem>
-                    <SelectItem value="mobile-development">
-                      Mobile App Development
-                    </SelectItem>
-                    <SelectItem value="system-administration">
-                      System Administration
-                    </SelectItem>
-                    <SelectItem value="graphic-design">
-                      Graphic Design
-                    </SelectItem>
-                    <SelectItem value="it-support">IT Support</SelectItem>
+                    {services.map((service) => (
+                      <SelectItem key={service.num} value={service.title}>
+                        {service.title}
+                      </SelectItem>
+                    ))}
                   </SelectGroup>
                 </SelectContent>
               </Select>
+              {/* hidden input for service */}
+              <input type="hidden" name="service" value={selectedService} />
               {/* textarea */}
               <Textarea
                 className="h-[200px]"
                 placeholder="Type your message here."
+                name="message"
               />
-              <Button size="md" className="max-w-40">
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+              <Button
+                size="md"
+                className="max-w-40"
+                type="submit"
+                disabled={state.submitting}
+              >
                 Send Message
               </Button>
             </form>
