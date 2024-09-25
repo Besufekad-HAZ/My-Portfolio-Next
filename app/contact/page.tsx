@@ -34,6 +34,35 @@ const info = [
   },
 ];
 
+// Define the services array
+const services = [
+  {
+    num: "01",
+    title: "Web Development",
+    href: "/web-development",
+  },
+  {
+    num: "02",
+    title: "Mobile App Development",
+    href: "/mobile-development",
+  },
+  {
+    num: "03",
+    title: "System Administration",
+    href: "/system-administration",
+  },
+  {
+    num: "04",
+    title: "Graphic Design",
+    href: "/graphic-design",
+  },
+  {
+    num: "05",
+    title: "IT Support",
+    href: "/it-support",
+  },
+];
+
 import { motion } from "framer-motion";
 const Contact = () => {
   return (
@@ -66,7 +95,7 @@ const Contact = () => {
               </div>
               {/* select */}
               <Select>
-                <SelectTrigger className="w-full">
+                <SelectTrigger className="w-full animate-blink-border">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>

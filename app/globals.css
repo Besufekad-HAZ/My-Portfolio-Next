@@ -25,4 +25,20 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #00ff99;
   }
+
+  @keyframes blink-border {
+    0% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #00ff99;
+    }
+    100% {
+      border-color: transparent;
+    }
+  }
+
+  .animate-blink-border {
+    animation: blink-border 1s infinite;
+  }
 }
