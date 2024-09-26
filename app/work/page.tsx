@@ -138,7 +138,7 @@ const projects = [
       { name: "Redux Toolkit" },
     ],
     image: "/assets/work/project6.png",
-    link: "https://644953ccb52d2a23ea2ab507--air-pollution-stats.netlify.app/",
+    link: "https://airpollution-seven.vercel.app",
     github: "https://github.com/Besufekad-HAZ/React-Capstone-Air-Pollution",
   },
 ];
