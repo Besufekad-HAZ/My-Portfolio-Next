@@ -122,6 +122,25 @@ const projects = [
     link: "https://cash-buddy.onrender.com/",
     github: "https://github.com/Besufekad-HAZ/Budget-app",
   },
+  {
+    num: "06",
+    category: "Front End",
+    title: "Air Pollution Data Web App",
+    description:
+      "Air-Pollution-Data is a React Capstone Project that provides a simple interface for quickly displaying Air pollution data for different countries. In addition, it provides current, forecast, and historical air pollution data for any coordinates on the globe.",
+    stack: [
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "JavaScript" },
+      { name: "Webpack" },
+      { name: "React" },
+      { name: "Redux" },
+      { name: "Redux Toolkit" },
+    ],
+    image: "/assets/work/project6.png",
+    link: "https://644953ccb52d2a23ea2ab507--air-pollution-stats.netlify.app/",
+    github: "https://github.com/Besufekad-HAZ/React-Capstone-Air-Pollution",
+  },
 ];
 
 const Work = () => {
