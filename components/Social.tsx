@@ -5,18 +5,22 @@ const socials = [
   {
     icon: <FaGithub />,
     path: "https://github.com/Besufekad-HAZ",
+    label: "GitHub",
   },
   {
     icon: <FaLinkedin />,
     path: "https://www.linkedin.com/in/besufekadalemu",
+    label: "LinkedIn",
   },
   {
     icon: <FaYoutube />,
     path: "https://www.youtube.com/@besufekadalemu8443",
+    label: "YouTube",
   },
   {
     icon: <FaInstagram />,
     path: "https://www.instagram.com/besufekad77",
+    label: "Instagram",
   },
 ];
 
@@ -34,6 +38,7 @@ const Social: React.FC<SocialProps> = ({ containerStyles, iconStyles }) => {
           href={item.path}
           className={iconStyles}
           target="_blank"
+          aria-label={item.label}
         >
           {item.icon}
         </Link>
