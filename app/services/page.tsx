@@ -21,13 +21,13 @@ const services = [
     num: "03",
     title: "System Administration",
     text: "I provide system administration and IT support, ensuring smooth operation and security of IT systems.",
-    href: "/conact",
+    href: "/contact",
   },
   {
     num: "04",
     title: "Graphic Design",
     text: "I design various web and print graphics, focusing on aesthetics and effective communication.",
-    href: "/graphic-design",
+    href: "/contact",
   },
   {
     num: "05",
