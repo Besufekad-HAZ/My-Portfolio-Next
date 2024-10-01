@@ -39,6 +39,7 @@ const Stairs = () => {
             delay: reverseIndex(index) * 0.1,
           }}
           className="w-full h-full bg-white relative"
+          style={{ willChange: "top", height: "100vh" }}
         />
       ))}
     </>
