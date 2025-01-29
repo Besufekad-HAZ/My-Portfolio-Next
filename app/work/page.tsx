@@ -1,29 +1,18 @@
 "use client";
 
-// import framer motion
 import { motion } from "framer-motion";
-import { useState } from "react";
-
-// import swiper react
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// import swiper styles
 import "swiper/css";
-
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-
-// import Tooltips
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
 import Link from "next/link";
 import Image from "next/image";
-
-// components
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
@@ -107,6 +96,43 @@ const projects = [
   {
     num: "05",
     category: "Full Stack",
+    title: "Ethio-Chat",
+    description:
+      "A full stack chat application built with React JS and Firebase. Users can create accounts, chat with friends, and send images. Authentication is handled by Firebase, chat images are stored in Firebase Storage, and messages are stored in Firestore Database for real-time updates.",
+    stack: [
+      { name: "React (Front-end)" },
+      { name: "Firebase (Back-end)" },
+      { name: "CSS3" },
+      { name: "JavaScript" },
+      { name: "Firebase Storage for image uploads" },
+    ],
+    image: "/assets/work/chat-app.png",
+    link: "https://chat-app-7q7.pages.dev",
+    github: "https://github.com/Besufekad-HAZ/Chat-App",
+  },
+  {
+    num: "06",
+    category: "Full Stack",
+    title: "Background removal",
+    description:
+      "Bg-removal is a versatile image editing tool built with the MERN stack. Upload an image, let our AI process it, and download the image with a transparent background. Experience seamless background removal and manage your credits with integrated online payment.",
+    stack: [
+      { name: "MongoDB" },
+      { name: "Express" },
+      { name: "React" },
+      { name: "Node.js" },
+      { name: "Clerk" },
+      { name: "JavaScript" },
+      { name: "HTML5" },
+      { name: "CSS3" },
+    ],
+    image: "/assets/work/bg-removal.png",
+    link: "https://background-remover-app-ovof.vercel.app",
+    github: "https://github.com/Besufekad-HAZ/background-remover-app",
+  },
+  {
+    num: "07",
+    category: "Full Stack",
     title: "Cash-Buddy",
     description:
       "Cash-Buddy is a mobile web application that allows users to manage their budgets by keeping track of their transactions and associated categories. The app requires users to register and log in to ensure that their data is private. Users can add new transactions associated with categories and view the money spent on each category.",
@@ -123,7 +149,7 @@ const projects = [
     github: "https://github.com/Besufekad-HAZ/Budget-app",
   },
   {
-    num: "06",
+    num: "08",
     category: "Front End",
     title: "Air Pollution Data Web App",
     description:
@@ -142,16 +168,23 @@ const projects = [
     github: "https://github.com/Besufekad-HAZ/React-Capstone-Air-Pollution",
   },
 ];
-
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    // Mark as client after component mounts
+    setIsClient(true);
+  }, []);
 
   const handleSlideChange = (swiper: { activeIndex: number }) => {
-    // get current slide index
-    const currentIndex = swiper.activeIndex;
-    // update project state based on current slide index
-    setProject(projects[currentIndex]);
+    setProject(projects[swiper.activeIndex]);
   };
+
+  if (!isClient) {
+    // Avoid rendering markup on the server to prevent mismatch
+    return null;
+  }
 
   return (
     <motion.section
@@ -164,48 +197,35 @@ const Work = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div
-            className="w-full xl:w-[50%] xl:h-[460px] flex flex-col
-          xl:justify-between order-2 xl:order-none"
-          >
+          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
-              {/* outline num */}
               <div
                 className="text-8xl leading-none font-extrabold text-transparent
               text-outline"
               >
                 {project.num}
               </div>
-              {/* project category */}
               <h2
                 className="text-[42px] font-bold leading-none text-white
               group-hover:text-accent transition-all duration-500 capitalize"
               >
                 {project.category} project
               </h2>
-              {/* project description */}
               <p className="text-white/60">{project.description}</p>
               <ul className="flex flex-wrap gap-2 md:gap-4">
                 {project.stack.map((stack, index) => (
                   <li key={index} className="text-lg text-accent">
                     {stack.name}
-                    {/* remove the last comma */}
                     {index !== project.stack.length - 1 && ","}
                   </li>
                 ))}
               </ul>
-              {/* border */}
               <div className="border border-white/20"></div>
-              {/* buttons */}
               <div className="flex items-center gap-4">
-                {/* live project button */}
                 <Link href={project.link} target="_blank">
                   <TooltipProvider>
                     <Tooltip>
-                      <TooltipTrigger
-                        className="w-[70px] h-[70px] rounded-full bg-white/5
-                      flex justify-center items-center group"
-                      >
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                         <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
@@ -214,14 +234,10 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                {/* github project button */}
                 <Link href={project.github} target="_blank">
                   <TooltipProvider>
                     <Tooltip>
-                      <TooltipTrigger
-                        className="w-[70px] h-[70px] rounded-full bg-white/5
-                      flex justify-center items-center group"
-                      >
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                         <BsGithub className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
@@ -240,22 +256,14 @@ const Work = () => {
               className="xl:h-[520px] mb-12"
               onSlideChange={handleSlideChange}
             >
-              {projects.map((project, index) => (
-                <SwiperSlide key={index}>
-                  <div
-                    className="h-[460px] relative group flex justify-center
-                  text-center bg-pink-50/20"
-                  >
-                    {/* overlay */}
-                    <div
-                      className="absolute top-0 bottom-0 w-full h-full
-                    bg-black/10 z-10"
-                    ></div>
-                    {/* image */}
+              {projects.map((p, i) => (
+                <SwiperSlide key={i}>
+                  <div className="h-[460px] relative group flex justify-center text-center bg-pink-50/20">
+                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                     <div className="relative w-full h-full">
                       <Image
-                        src={project.image}
-                        alt={project.title}
+                        src={p.image}
+                        alt={p.title}
                         fill
                         className="object-cover"
                       />
@@ -263,13 +271,12 @@ const Work = () => {
                   </div>
                 </SwiperSlide>
               ))}
-              {/* slider buttons */}
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)]
-                xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                  xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
                 btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px]
-                w-[44px] h-[44px] flex justify-center items-center transition-all rounded-full"
-                iconsStyles={""}
+                  w-[44px] h-[44px] flex justify-center items-center transition-all rounded-full"
+                iconsStyles=""
               />
             </Swiper>
           </div>
