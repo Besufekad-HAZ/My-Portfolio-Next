@@ -39,6 +39,30 @@ export const projects = [
   {
     num: "03",
     category: "Full Stack",
+    title: "Hope Channel Ethiopia",
+    description:
+      "Hope Channel Ethiopia is a modern Christian broadcasting website featuring live streaming, on-demand content, interactive schedules, and community tools. It supports multiple languages and offers a seamless experience for spiritual engagement.",
+    stack: [
+      { name: "Next.js 15" },
+      { name: "React 19" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Shadcn/ui" },
+      { name: "Node.js" },
+      { name: "YouTube API" },
+      { name: "Mapbox GL" },
+      { name: "Lucide React" },
+      { name: "React Hook Form" },
+      { name: "Zod Validation" },
+      { name: "Framer Motion" },
+    ],
+    image: "/assets/work/hope.png",
+    link: "https://hopechannelethiopia.org/",
+    github: "https://github.com/Besufekad-HAZ/Hope-channel-ethiopia",
+  },
+  {
+    num: "04",
+    category: "Full Stack",
     title: "Ethio-Chat",
     description:
       "A full stack chat application built with React JS and Firebase. Users can create accounts, chat with friends, and send images. Authentication is handled by Firebase, chat images are stored in Firebase Storage, and messages are stored in Firestore Database for real-time updates.",
@@ -54,7 +78,7 @@ export const projects = [
     github: "https://github.com/Besufekad-HAZ/Chat-App",
   },
   {
-    num: "04",
+    num: "05",
     category: "Full Stack",
     title: "Url Shortener",
     description:
@@ -73,7 +97,7 @@ export const projects = [
     github: "https://github.com/Besufekad-HAZ/URL-shortener",
   },
   {
-    num: "05",
+    num: "06",
     category: "Full Stack",
     title: "Background removal",
     description:
@@ -93,7 +117,7 @@ export const projects = [
     github: "https://github.com/Besufekad-HAZ/background-remover-app",
   },
   {
-    num: "06",
+    num: "07",
     category: "Full Stack",
     title: "Motorcycle Rental Store",
     description:
@@ -112,24 +136,6 @@ export const projects = [
     image: "/assets/work/project4.png",
     link: "https://rent-motorcycles.onrender.com",
     github: "https://github.com/TamaraDimov/vespa-rentals-frontend",
-  },
-  {
-    num: "07",
-    category: "Full Stack",
-    title: "Cash-Buddy",
-    description:
-      "Cash-Buddy is a mobile web application that allows users to manage their budgets by keeping track of their transactions and associated categories. The app requires users to register and log in to ensure that their data is private. Users can add new transactions associated with categories and view the money spent on each category.",
-    stack: [
-      { name: "Ruby on Rails" },
-      { name: "PostgreSQL" },
-      { name: "HTML5" },
-      { name: "CSS3" },
-      { name: "JavaScript" },
-      { name: "Devise" },
-    ],
-    image: "/assets/work/project5.png",
-    link: "https://cash-buddy.onrender.com/",
-    github: "https://github.com/Besufekad-HAZ/Budget-app",
   },
   {
     num: "08",
