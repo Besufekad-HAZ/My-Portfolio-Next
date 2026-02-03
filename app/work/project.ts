@@ -2,20 +2,18 @@ export const projects = [
   {
     num: "01",
     category: "Full Stack",
-    title: "Admin Dashboard",
+    title: "Belimuno Jobs",
     description:
-      "In this project I built and deployed a MERN Stack Admin Dashboard. For the frontend, I used Material UI, Material UI Data Grid, Nivo Charts, Redux Toolkit and Redux Toolkit Query. For backend, I used Node JS, Express Js, Mongoose, and MongoDB.",
+      "Belimuno Jobs is Ethiopia's premier HR outsourcing platform, connecting skilled workers with businesses across the country and helping professionals grow their careers.",
     stack: [
-      { name: "JavaScript" },
-      { name: "Material UI" },
-      { name: "Redux Toolkit" },
-      { name: "Node.js" },
+      { name: "Next.js" },
       { name: "Express.js" },
+      { name: "Node.js" },
       { name: "MongoDB" },
     ],
-    image: "/assets/work/project1.png",
-    link: "https://mern-dashboard-client-37t0.onrender.com",
-    github: "https://github.com/Besufekad-HAZ/MERN-Admin-Dashboard",
+    image: "/assets/work/belimuno.png",
+    link: "https://belimunojobs.com/",
+    github: "https://github.com/Besufekad-HAZ",
   },
   {
     num: "02",
@@ -43,8 +41,8 @@ export const projects = [
     description:
       "Hope Channel Ethiopia is a modern Christian broadcasting website featuring live streaming, on-demand content, interactive schedules, and community tools. It supports multiple languages and offers a seamless experience for spiritual engagement.",
     stack: [
-      { name: "Next.js 15" },
-      { name: "React 19" },
+      { name: "Next.js 15.5" },
+      { name: "React 18.3" },
       { name: "TypeScript" },
       { name: "Tailwind CSS" },
       { name: "Shadcn/ui" },
@@ -63,6 +61,24 @@ export const projects = [
   {
     num: "04",
     category: "Full Stack",
+    title: "Admin Dashboard",
+    description:
+      "In this project I built and deployed a MERN Stack Admin Dashboard. For the frontend, I used Material UI, Material UI Data Grid, Nivo Charts, Redux Toolkit and Redux Toolkit Query. For backend, I used Node JS, Express Js, Mongoose, and MongoDB.",
+    stack: [
+      { name: "JavaScript" },
+      { name: "Material UI" },
+      { name: "Redux Toolkit" },
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "MongoDB" },
+    ],
+    image: "/assets/work/project1.png",
+    link: "https://mern-dashboard-client-37t0.onrender.com",
+    github: "https://github.com/Besufekad-HAZ/MERN-Admin-Dashboard",
+  },
+  {
+    num: "05",
+    category: "Full Stack",
     title: "Ethio-Chat",
     description:
       "A full stack chat application built with React JS and Firebase. Users can create accounts, chat with friends, and send images. Authentication is handled by Firebase, chat images are stored in Firebase Storage, and messages are stored in Firestore Database for real-time updates.",
@@ -78,7 +94,7 @@ export const projects = [
     github: "https://github.com/Besufekad-HAZ/Chat-App",
   },
   {
-    num: "05",
+    num: "06",
     category: "Full Stack",
     title: "Url Shortener",
     description:
@@ -97,7 +113,7 @@ export const projects = [
     github: "https://github.com/Besufekad-HAZ/URL-shortener",
   },
   {
-    num: "06",
+    num: "07",
     category: "Full Stack",
     title: "Background removal",
     description:
@@ -117,7 +133,7 @@ export const projects = [
     github: "https://github.com/Besufekad-HAZ/background-remover-app",
   },
   {
-    num: "07",
+    num: "08",
     category: "Full Stack",
     title: "Motorcycle Rental Store",
     description:
@@ -138,7 +154,7 @@ export const projects = [
     github: "https://github.com/TamaraDimov/vespa-rentals-frontend",
   },
   {
-    num: "08",
+    num: "09",
     category: "Front End",
     title: "Air Pollution Data Web App",
     description:
@@ -157,7 +173,7 @@ export const projects = [
     github: "https://github.com/Besufekad-HAZ/React-Capstone-Air-Pollution",
   },
   {
-    num: "09",
+    num: "10",
     category: "Full Stack",
     title: "AI Code Reviewer",
     description:

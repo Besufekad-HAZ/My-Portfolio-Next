@@ -20,6 +20,9 @@ import {
   SiPostgresql,
   SiAdobephotoshop,
   SiAdobeindesign,
+  SiDocker,
+  SiPython,
+  SiPhp,
 } from "react-icons/si";
 
 // about me data
@@ -68,9 +71,14 @@ const experience = {
     with experience in various industries and a strong focus on creating efficient and scalable web applications.",
   items: [
     {
+      company: "Safaricom Ethiopia",
+      position: "Full Stack Developer",
+      duration: "August 2025 — Present",
+    },
+    {
       company: "Amen Devs",
       position: "Full Stack Developer",
-      duration: "2023 — PRESENT",
+      duration: "2023 — 2025",
     },
     {
       company: "Ezra Seminary",
@@ -139,6 +147,18 @@ const skills = {
     {
       icon: <FaNodeJs />,
       name: "Node.js",
+    },
+    {
+      icon: <SiDocker />,
+      name: "Docker",
+    },
+    {
+      icon: <SiPython />,
+      name: "Python",
+    },
+    {
+      icon: <SiPhp />,
+      name: "PHP",
     },
     {
       icon: <SiTailwindcss />,
