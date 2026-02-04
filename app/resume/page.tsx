@@ -217,19 +217,14 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12
-      xl:py-0"
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
-          className="flex flex-col xl:flex-row
-        gap-[60px]"
+          className="flex flex-col xl:flex-row gap-[60px]"
         >
-          <TabsList
-            className="flex flex-col w-full mx-auto
-          xl:mx-0 gap-6"
-          >
+          <TabsList className="flex flex-col w-full mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -251,13 +246,11 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] py-4 px-10 rounded-xl flex flex-col
-                          justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] py-4 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3
-                            className="text-lg max-w-[260px] min-h-[60px]
-                          text-center lg:text-left" //the text can be xl based on the screen size ❗❗❗
+                            className="text-lg max-w-[260px] min-h-[60px] text-center lg:text-left" //the text can be xl based on the screen size ❗❗❗
                           >
                             {item.position}
                           </h3>
@@ -287,13 +280,11 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] py-4 px-10 rounded-xl flex flex-col
-                          justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] py-4 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3
-                            className="text-lg max-w-[260px] min-h-[60px]
-                          text-center lg:text-left" //also this text can be xl based on the screen size ❗❗❗
+                            className="text-lg max-w-[260px] min-h-[60px] text-center lg:text-left" //also this text can be xl based on the screen size ❗❗❗
                           >
                             {item.degree}
                           </h3>
@@ -325,14 +316,8 @@ const Resume = () => {
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger
-                              className="w-full h-[150px] bg-[#232329] rounded-xl flex
-                            justify-center items-center group"
-                            >
-                              <div
-                                className="text-5xl group-hover:text-accent transition-all
-                              duration-300"
-                              >
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <div className="text-5xl group-hover:text-accent transition-all duration-300">
                                 {skill.icon}
                               </div>
                             </TooltipTrigger>
@@ -360,10 +345,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {about.Description} <br />
                 </p>
-                <ul
-                  className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px]
-                mx-auto xl:mx-0"
-                >
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li
