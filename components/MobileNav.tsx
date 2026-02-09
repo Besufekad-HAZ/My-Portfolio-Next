@@ -7,23 +7,23 @@ import { CiMenuFries } from "react-icons/ci";
 
 const links = [
   {
-    name: "home",
+    name: "Home",
     path: "/",
   },
   {
-    name: "services",
+    name: "Services",
     path: "/services",
   },
   {
-    name: "resume",
+    name: "Resume",
     path: "/resume",
   },
   {
-    name: "work",
+    name: "Work",
     path: "/work",
   },
   {
-    name: "contact",
+    name: "Contact",
     path: "/contact",
   },
 ];
@@ -33,31 +33,38 @@ const MobileNav = () => {
   return (
     <Sheet>
       <SheetTrigger
-        className="flex justify-center items-center"
+        className="flex justify-center items-center w-10 h-10 rounded-full glass hover:border-accent/50 transition-all duration-300"
         aria-label="Open navigation menu"
       >
-        <CiMenuFries className="text-[32px] text-accent" />
+        <CiMenuFries className="text-2xl text-accent" />
       </SheetTrigger>
-      <SheetContent className="flex flex-col">
+      <SheetContent className="flex flex-col bg-primary/95 backdrop-blur-xl border-l border-white/10">
         {/* logo */}
-        <div className="mt-32 mb-40 text-center text-2xl">
+        <div className="mt-20 mb-16 text-center">
           <Link href="/">
-            <h1 className="text-4xl font-semibold">
-              Besu<span className="text-accent">.</span>
+            <h1 className="text-3xl font-bold">
+              <span className="text-white">Besu</span>
+              <span className="text-accent">.</span>
             </h1>
           </Link>
         </div>
+
         {/* nav */}
-        <nav className="flex flex-col justify-center items-center gap-8">
+        <nav className="flex flex-col justify-center items-center gap-6">
           {links.map((link, index) => {
+            const isActive = link.path === pathname;
             return (
               <Link
                 href={link.path}
                 key={index}
-                className={`${
-                  link.path === pathname &&
-                  "text-accent border-b-2 border-accent"
-                } text-xl capitalize font-medium hover:text-accent transition-all`}
+                className={`
+                  relative px-6 py-3 text-lg font-medium transition-all duration-300 rounded-full
+                  ${
+                    isActive
+                      ? "text-primary bg-accent"
+                      : "text-white/80 hover:text-accent hover:bg-white/5"
+                  }
+                `}
               >
                 {link.name}
               </Link>

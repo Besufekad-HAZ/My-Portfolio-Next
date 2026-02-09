@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const socials = [
   {
@@ -25,23 +28,33 @@ const socials = [
 ];
 
 interface SocialProps {
-  containerStyles: string;
-  iconStyles: string;
+  containerStyles?: string;
+  iconStyles?: string;
 }
 
-const Social: React.FC<SocialProps> = ({ containerStyles, iconStyles }) => {
+const Social: React.FC<SocialProps> = ({
+  containerStyles = "flex gap-4",
+  iconStyles = "w-10 h-10 border border-accent/50 rounded-full flex justify-center items-center text-accent hover:bg-accent hover:text-primary transition-all duration-300",
+}) => {
   return (
     <div className={containerStyles}>
       {socials.map((item, index) => (
-        <Link
+        <motion.div
           key={index}
-          href={item.path}
-          className={iconStyles}
-          target="_blank"
-          aria-label={item.label}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 + index * 0.1, duration: 0.3 }}
         >
-          {item.icon}
-        </Link>
+          <Link
+            href={item.path}
+            className={iconStyles}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={item.label}
+          >
+            {item.icon}
+          </Link>
+        </motion.div>
       ))}
     </div>
   );
