@@ -28,6 +28,10 @@ export const metadata: Metadata = {
     "Ethiopia",
   ],
   authors: [{ name: "Besufekad Alemu" }],
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/favicon.ico",
+  },
   openGraph: {
     title: "Besufekad Alemu | Full-Stack Developer",
     description:

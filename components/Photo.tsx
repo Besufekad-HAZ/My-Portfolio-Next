@@ -33,8 +33,8 @@ const Photo = () => {
           }}
         />
 
-        {/* Hexagonal frame container */}
-        <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] xl:w-[420px] xl:h-[420px]">
+        {/* Hexagonal frame container — smaller to fit viewport */}
+        <div className="relative w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] xl:w-[350px] xl:h-[350px]">
           {/* Animated border hexagon */}
           <motion.svg
             className="absolute inset-0 w-full h-full"
@@ -103,11 +103,11 @@ const Photo = () => {
               src="/assets/Profile.png"
               priority
               fill
-              sizes="(max-width: 640px) 280px, (max-width: 1200px) 320px, 420px"
+              sizes="(max-width: 640px) 240px, (max-width: 1200px) 280px, 350px"
               alt="Besufekad Alemu"
               className="object-cover object-center scale-110"
               style={{
-                filter: "contrast(1.1) brightness(1.15) saturate(1.2)",
+                filter: "contrast(1.1) brightness(1.25) saturate(1.3)",
                 mixBlendMode: "normal",
               }}
             />
