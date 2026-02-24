@@ -31,7 +31,7 @@ const about = {
   info: [
     { fieldName: "Name", fieldValue: "Besufekad Alemu" },
     { fieldName: "Phone", fieldValue: "(+251) 923027215" },
-    { fieldName: "Experience", fieldValue: "5+ years" },
+    { fieldName: "Experience", fieldValue: "6+ years" },
     { fieldName: "Nationality", fieldValue: "Ethiopian" },
     { fieldName: "Email", fieldValue: "Besurye@gmail.com" },
     { fieldName: "Freelance", fieldValue: "Available" },
