@@ -55,19 +55,19 @@ const itemVariants = {
 
 const Stats = () => {
   return (
-    <section className="py-4 xl:py-6 mt-auto">
+    <section className="pt-1 pb-3 sm:pt-2 sm:pb-5 xl:pb-6">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="grid grid-cols-2 lg:grid-cols-4 gap-3 xl:gap-4"
+        className="grid grid-cols-1 min-[352px]:grid-cols-2 min-[1100px]:grid-cols-4 gap-3 sm:gap-4"
       >
         {stats.map((item, index) => (
           <motion.div
             key={index}
             variants={itemVariants}
-            className="card group cursor-default !p-4"
+            className="card group cursor-default !p-3.5 sm:!p-4"
           >
             <div className="flex flex-col items-center text-center gap-1.5">
               {/* Icon */}
@@ -77,7 +77,7 @@ const Stats = () => {
 
               {/* Number */}
               <div className="flex items-baseline gap-0.5">
-                <span className="text-2xl xl:text-4xl font-bold text-accent">
+                <span className="text-[1.75rem] sm:text-3xl xl:text-4xl font-bold text-accent">
                   <CountUp
                     end={item.num}
                     duration={3}
@@ -92,7 +92,7 @@ const Stats = () => {
               </div>
 
               {/* Label */}
-              <p className="text-white/60 text-xs xl:text-sm font-medium leading-tight">
+              <p className="text-white/60 text-xs sm:text-sm font-medium leading-tight max-w-[16ch]">
                 {item.text}
               </p>
             </div>
