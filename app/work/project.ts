@@ -37,6 +37,22 @@ export const projects = [
   {
     num: "03",
     category: "Full Stack",
+    title: "Safaricom Developer Portal",
+    description:
+      "Safaricom Ethiopia's developer portal for API documentation and integration. I refactored the design, made the backend service fully functional, fixed critical issues, and migrated the backend from PHP to Spring Boot for improved performance and maintainability.",
+    stack: [
+      { name: "Vue.js" },
+      { name: "Spring Boot" },
+      { name: "PHP" },
+      { name: "REST API" },
+    ],
+    image: "/assets/work/safaricom.png",
+    link: "https://developer.safaricom.et/",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "Full Stack",
     title: "Hope Channel Ethiopia",
     description:
       "Hope Channel Ethiopia is a modern Christian broadcasting website featuring live streaming, on-demand content, interactive schedules, and community tools. It supports multiple languages and offers a seamless experience for spiritual engagement.",
@@ -59,7 +75,7 @@ export const projects = [
     github: "https://github.com/Besufekad-HAZ/Hope-channel-ethiopia",
   },
   {
-    num: "04",
+    num: "05",
     category: "Full Stack",
     title: "Admin Dashboard",
     description:
@@ -77,7 +93,7 @@ export const projects = [
     github: "https://github.com/Besufekad-HAZ/MERN-Admin-Dashboard",
   },
   {
-    num: "05",
+    num: "06",
     category: "Full Stack",
     title: "Ethio-Chat",
     description:
@@ -94,7 +110,7 @@ export const projects = [
     github: "https://github.com/Besufekad-HAZ/Chat-App",
   },
   {
-    num: "06",
+    num: "07",
     category: "Full Stack",
     title: "Vespa Rentals",
     description:
@@ -113,7 +129,7 @@ export const projects = [
     github: "https://github.com/Besufekad-HAZ/vespa-rentals",
   },
   {
-    num: "07",
+    num: "08",
     category: "Full Stack",
     title: "Background removal",
     description:
@@ -131,25 +147,6 @@ export const projects = [
     image: "/assets/work/bg-removal.png",
     link: "https://background-remover-app-ovof.vercel.app",
     github: "https://github.com/Besufekad-HAZ/background-remover-app",
-  },
-  {
-    num: "08",
-    category: "Full Stack",
-    title: "Url Shortener",
-    description:
-      "URL shortener is a web application that takes a long URL and generates a shorter, unique URL that redirects to the original URL. This is useful for sharing long links, especially on platforms with character limits like social media.",
-    stack: [
-      { name: "Ruby on Rails" },
-      { name: "PostgreSQL" },
-      { name: "HTML5" },
-      { name: "CSS3" },
-      { name: "JavaScript" },
-      { name: "Heroku" },
-      { name: "GitHub Actions" },
-    ],
-    image: "/assets/work/project3.png",
-    link: "https://url-shortner-bese-b983225bbc35.herokuapp.com/",
-    github: "https://github.com/Besufekad-HAZ/URL-shortener",
   },
   {
     num: "09",
